@@ -1,0 +1,34 @@
+.title{
+    text-align:center;
+    padding:100px;
+}
+
+.container-for-boxes{
+    margin: auto;
+    width: 90%;
+    border: 3px solid green;
+    padding: 15px;
+}
+
+.left-side-container{
+    float: left;
+    margin: left;
+    width:20%;
+    padding:200px;
+    height:50%;
+    border: 3px solid blue;
+
+}
+
+.right-side-container{
+    float: right;
+    width:20%;
+    padding:200px;
+    height:50%;
+    border: 3px solid blue;
+
+}
+
+.clear{
+    clear: both;
+}
