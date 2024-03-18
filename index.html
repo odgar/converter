@@ -7,24 +7,49 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <audio id="fortnitemusic" autoplay>
-        <source src="/audios/theme.mp3"> </audio> 
+    <source src="/audios/theme.mp3"> </audio> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="title"><h1>official vbucks converter!1!!!!!11</h1>
         <br><h2>no ads no scam no tracking 100% free no data stolen trust</h2>
     </div>
     <div class="container-for-boxes">
+        <div class="container-for-button1">
+        </div>
         <div class="left-side-container">
-            <select name="language" id="language"> 
+            from <br>
+            <select name="table1" id="table1"> 
                 <option value="select1">select currency</option>
-                <option value="usd">u.s dollars </option>
+                <option value="vbucks">vbucks </option>
+                <option value="souls">u.s dollars</option>
+                <option value="robux">souls</option>
+                <option value="uk">bri ish pounds</option>
+                <option value="canada">canada dollars</option>
             </select>
+            <br><br> amount
+            <input type="text" class="input1" placeholder="0.00" id="input1">
+            <br><br>
+            <button id="button1">convert</button>
         </div>
         <div class="right-side-container">
-            <select name="language" id="language"> 
+            to <br>
+            <select name="table2" id="table2"> 
                 <option value="select2">select currency</option>
-                <option value="vbuck">vbucks</option>
+                <option value="usd">u.s dollars</option>
+                <option value="vbucks">vbucks </option>
+                <option value="robux">souls</option>
+                <option value="uk">bri ish pounds</option>
+                <option value="canada">canada dollars</option>
             </select>
+            <br>
+            <br>
+            <form action>
+                <label for="output">output</label>
+                <input type="text" id="converted1" value="converted amount" readonly>
+            </form>
         </div>
         <div class="clear"></div>
     </div>

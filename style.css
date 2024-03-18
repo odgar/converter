@@ -1,13 +1,28 @@
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(225, 230, 240);
+}
+
 .title{
     text-align:center;
     padding:100px;
 }
 
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
 .container-for-boxes{
     margin: auto;
     width: 90%;
     border: 3px solid green;
     padding: 15px;
+}
+
+.button1{
+    position:relative;
+    
 }
 
 .left-side-container{
@@ -32,3 +47,14 @@
 .clear{
     clear: both;
 }
+
+#table1{
+    width:200px;
+    height:100px;
+}
+
+#table2{
+    width:200px;
+    height:100px;
+}
+
