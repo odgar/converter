@@ -44,12 +44,34 @@ input_value_bottom.addEventListener('input', convert_bottom);
 selected_currency_top.addEventListener('input', convert_top);
 selected_currency_bottom.addEventListener('input', convert_bottom);
 
-// swaps positions of the two currencies selected by user
+
+// switches the positions of the two selected currencies
 function swap() {
+    let input_value_top = document.getElementById('input_value_top').value;
+    let selected_currency_top = document.getElementById('selected_currency_top').value;
+    document.getElementById('selected_currency_top').value = selected_currency_bottom;
+    document.getElementById('sleected_currency_bottom').value = selected_currency_top;
+    convert_top();
+}
+
+// converts money from top box and displays results in bottom box
+function convert_top() {
     let input_value_top = document.getElementById('input_value_top').value;
     let selected_currency_top = document.getElementById('selected_value_top').value;
     let selected_currency_bottom = document.getElementById('selected_value_bottom').value;
     let placeholder_value = input_value_bottom*exchange_rates['xxx to vb'][selected_currency_bottom];
-    let placeholder_value2 = placeholder_value*exchange_rates['vb to xxx'][selected_currency_top];
-    let new_bottom_value = Math.round
+    let placeholder_value_2 = placeholder_value*exchange_rates['vb to xxx'][selected_currency_top];
+    let new_bottom_value = Math.round(placeholder_value_2*100)/100;
+    document.getElementById('input_value_bottom').value = new_bottom_value;
+}
+
+// converts money from bottom box and displays results in top box
+function convert_top() {
+    let input_value_bottom = document.getElementById('input_value_bottom').value;
+    let selected_currency_bottom = document.getElementById('selected_value_bottom').value;
+    let selected_currency_top = document.getElementById('selected_value_top').value;
+    let placeholder_value = input_value_bottom*exchange_rates['xxx to vb'][selected_currency_bottom];
+    let placeholder_value_2 = placeholder_value*exchange_rates['vb to xxx'][selected_currency_top];
+    let new_top_value = Math.round(placeholder_value_2*100)/100;
+    document.getElementById('input_value_top').value = new_top_value;
 }

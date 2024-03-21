@@ -21,7 +21,7 @@
         </div>
         <div class="left-side-container">
             from <br>
-            <select name="table1" id="table1"> 
+            <select name="table1" id="selected_currency_top"> 
                 <option value="select1">select currency</option>
                 <option value="vb">vbucks </option>
                 <option value="usd">usd</option>
@@ -30,14 +30,16 @@
                 <option value="cd">canada dollars</option>
             </select>
             <br><br> amount
-            <input type="text" class="form-control searchBox" placeholder="0.00" id="oamount">
+            <input type="text" class="form-control searchBox" placeholder="0.00" id="input_value_top">
             <br><br>
             <button class="btn btn-primary convert m-2" type="submit">convert</button>
-            <button class="btn btn-primary m-2" onclick="clearVal()" value="reset">reset</button>
+            <div id ="swapButton">
+                <button onclick="swap()">swap</button>
+            </div>
         </div>
         <div class="right-side-container">
             to <br>
-            <select name="table2" id="table2"> 
+            <select name="table2" id="selected_currency_bottom"> 
                 <option value="select2">select currency</option>
                 <option value="usd">usd</option>
                 <option value="vb">vbucks </option>
@@ -49,7 +51,7 @@
             <br>
             <div id="finalAmount">
                 converted amount:
-                <span class="finalValue"></span>
+                <input type="number" class="one_box" value="0.00" id="input_value_bottom">
                 <br>
                 <br>
             </div>
@@ -58,4 +60,4 @@
     </div>
 
 </body>
-</html>
+</html> 
