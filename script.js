@@ -21,57 +21,24 @@
 
 //exchnage rates
 
-const exchange_rates = {
-    'vb to xxx': {
-        'vb' : 1.00,
-        'usd': 0.00009186,
-        's': 5,
-        'uk': 0.00007245,
-        'cd': 0.0001239,
-    },
-    'xxx to vb': {
-        'vb' : 1.00,
-        'usd': 0.00009186,
-        's': 5,
-        'uk': 0.00007245,
-        'cd': 0.0001239,
-    }
+const in_amount = document.getElementById("amount");
+const dd_from = document.getElementById("from");
+const dd_to = document.GetElementById("to");
+const div_result = document.GetElementById("result");
+
+const exchangeRates ={
+usd:{
+    usd: 1,
+    vb: 125,
+    : 0.000024,
+    uk: .79,
+    cd: 1.36,
+},
+
+vb:{
+    vb: 1,
+    usd: 0.008,
+    s: 0.00000019,
+    uk: 0.00632
 }
-
-//event listeners
-input_value_top.addEventListener('input', convert_top);
-input_value_bottom.addEventListener('input', convert_bottom);
-selected_currency_top.addEventListener('input', convert_top);
-selected_currency_bottom.addEventListener('input', convert_bottom);
-
-
-// switches the positions of the two selected currencies
-function swap() {
-    let input_value_top = document.getElementById('input_value_top').value;
-    let selected_currency_top = document.getElementById('selected_currency_top').value;
-    document.getElementById('selected_currency_top').value = selected_currency_bottom;
-    document.getElementById('sleected_currency_bottom').value = selected_currency_top;
-    convert_top();
-}
-
-// converts money from top box and displays results in bottom box
-function convert_top() {
-    let input_value_top = document.getElementById('input_value_top').value;
-    let selected_currency_top = document.getElementById('selected_value_top').value;
-    let selected_currency_bottom = document.getElementById('selected_value_bottom').value;
-    let placeholder_value = input_value_bottom*exchange_rates['xxx to vb'][selected_currency_bottom];
-    let placeholder_value_2 = placeholder_value*exchange_rates['vb to xxx'][selected_currency_top];
-    let new_bottom_value = Math.round(placeholder_value_2*100)/100;
-    document.getElementById('input_value_bottom').value = new_bottom_value;
-}
-
-// converts money from bottom box and displays results in top box
-function convert_top() {
-    let input_value_bottom = document.getElementById('input_value_bottom').value;
-    let selected_currency_bottom = document.getElementById('selected_value_bottom').value;
-    let selected_currency_top = document.getElementById('selected_value_top').value;
-    let placeholder_value = input_value_bottom*exchange_rates['xxx to vb'][selected_currency_bottom];
-    let placeholder_value_2 = placeholder_value*exchange_rates['vb to xxx'][selected_currency_top];
-    let new_top_value = Math.round(placeholder_value_2*100)/100;
-    document.getElementById('input_value_top').value = new_top_value;
 }

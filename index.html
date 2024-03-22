@@ -17,33 +17,28 @@
         <br><h2>no ads no scam no tracking 100% free no data stolen trust</h2>
     </div>
     <div class="container-for-boxes">
-        <div class="container-for-button1">
-        </div>
         <div class="left-side-container">
             from <br>
-            <select name="table1" id="selected_currency_top"> 
+            <select name="table1" id="cs2"> 
                 <option value="select1">select currency</option>
                 <option value="vb">vbucks </option>
                 <option value="usd">usd</option>
-                <option value="s">souls</option>
+                <option value="s">iranian rials </option>
                 <option value="uk">bri ish pounds</option>
                 <option value="cd">canada dollars</option>
             </select>
             <br><br> amount
-            <input type="text" class="form-control searchBox" placeholder="0.00" id="input_value_top">
+            <input type="text" class="text-Box" placeholder="0.00" id="textbox1">
             <br><br>
-            <button class="btn btn-primary convert m-2" type="submit">convert</button>
-            <div id ="swapButton">
-                <button onclick="swap()">swap</button>
-            </div>
+            <button id="button" onclick="convertCurrency()"><span>Convert</span></button>
         </div>
         <div class="right-side-container">
             to <br>
-            <select name="table2" id="selected_currency_bottom"> 
+            <select name="table1" id="cs3"> 
                 <option value="select2">select currency</option>
                 <option value="usd">usd</option>
                 <option value="vb">vbucks </option>
-                <option value="s">souls</option>
+                <option value="s">iranian rial </option>
                 <option value="uk">bri ish pounds</option>
                 <option value="cd">canada dollars</option>
             </select>
@@ -51,7 +46,7 @@
             <br>
             <div id="finalAmount">
                 converted amount:
-                <input type="number" class="one_box" value="0.00" id="input_value_bottom">
+                <input type="text" class="text-Box" placeholder="0.00" id="textbox2" readonly>
                 <br>
                 <br>
             </div>
